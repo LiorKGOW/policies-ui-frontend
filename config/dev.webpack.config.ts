@@ -36,7 +36,15 @@ plugins.push(
             root: resolve(__dirname, '../'),
             debug: true,
             useFileHash: false,
-            exclude: [ 'react-router-dom' ]
+            exclude: [ 'react-router-dom', 'react-router-dom' ],
+            shared: [
+                {
+                    'react-router-dom': {
+                        singleton: true,
+                        requiredVersion: '*'
+                    }
+                }
+            ]
         }
     )
 );
